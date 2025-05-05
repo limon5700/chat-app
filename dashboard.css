@@ -1,0 +1,71 @@
+/* dashboard.css */
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"], input[type="email"], input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  button {
+    padding: 6px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  button.cancel {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  button.edit {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  button.toggle {
+    background-color: #ffc107;
+    color: black;
+  }
+  

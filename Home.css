@@ -1,0 +1,264 @@
+/* General Reset and Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #3e566b;
+  color: #3e3e3e;
+}
+
+/* Chat App Layout */
+.chat-app {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 700px;
+  background-color: #17212B;
+  border-right: 1px solid #d0d0d0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+/* .sidebar, */
+ h1 {
+  color: #fff;
+  text-align: center;
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-bottom: 10px;
+}
+
+.profile h2 {
+  font-size: 20px;
+  color: #0078d4;
+  margin-top: 10px;
+}
+
+.profile .profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  /* object-fit: cover; */
+  
+}
+.chat-placeholder{
+  color: #fff;
+  text-align: center;
+  padding-top: 40%;
+}
+
+.profile button {
+  background-color: #0078d4;
+  width: 80px;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 10px;
+}
+
+.profile button:hover {
+  background-color: #005fa3;
+}
+
+.logout-btn {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.friend-list {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.friend {
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 21px;
+  background-color: #e6f1f9;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.friend:hover {
+  background-color: #b1fad1;
+  color: black;
+}
+
+/* Chatbox */
+.chatbox {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  background-color: #17212B;
+  padding: 20px;
+  border-bottom: 1px solid #d0d0d0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-header h2 {
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.chat-header button {
+  background-color: #ffffff;
+  border: none;
+  font-size: 16px;
+  color: #0078d4;
+  cursor: pointer;
+}
+
+.chat-header button:hover {
+  text-decoration: underline;
+}
+
+/* Chat Messages */
+.messages {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.message {
+  max-width: 70%;
+  margin-bottom: 12px;
+  padding: 12px 18px;
+  border-radius: 20px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: white;
+}
+
+.me {
+  display: block;
+  background-color: #1E2537;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.friend {
+  background-color: #17212B;
+  color: #ffffff;
+  border: 0.5px solid #96f6f5;
+  align-self: flex-start;
+  border-bottom-left-radius: 3px;
+}
+
+.input-area {
+  display: flex;
+  padding: 12px;
+  background-color: #17212B;
+  border-top: 1px solid #d0d0d0;
+}
+
+
+.input-area input {
+  flex-grow: 1;
+  padding: 12px 18px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 1px solid #d0d0d0;
+  background-color: #17212B;
+  color: #ffffff;
+}
+
+.input-area button {
+  padding: 10px 15px;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  margin-left: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.input-area button:hover {
+  background-color: #005fa3;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .chat-app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 60px;
+    flex-direction: block;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom: 1px solid #d0d0d0;
+  }
+
+  .friend-list {
+    display: block;
+  }
+
+  .chatbox {
+    height: calc(100vh - 60px);
+  }
+
+  .input-area {
+    padding: 10px;
+  }
+
+  .input-area input {
+    padding: 8px 14px;
+  }
+
+  .input-area button {
+    padding: 8px 12px;
+  }
+
+  .message {
+    font-size: 14px;
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile h2 {
+    font-size: 18px;
+  }
+
+  .chat-header h2 {
+    font-size: 20px;
+  }
+
+  .messages {
+    padding: 12px;
+  }
+
+  .friend {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+}
